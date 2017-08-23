@@ -26,6 +26,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'launchy'
   gem 'poltergeist'
+  gem 'capybara-screenshot'
 end
 
 group :development do

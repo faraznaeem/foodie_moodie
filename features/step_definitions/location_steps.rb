@@ -18,3 +18,8 @@ end
 Given(/^my current location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
   page.execute_script("map.setCenter(#{lat}, #{lng});")
 end
+
+Then(/^Show me a image of the page$/) do
+  sleep(1)
+  Capybara::Screenshot.screenshot_and_open_image
+end

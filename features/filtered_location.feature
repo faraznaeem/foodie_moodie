@@ -14,3 +14,4 @@ Background:
 Scenario:
   When I visit "landing" page
   And my current location is set to "59.33066" lat and "18.057932" lng
+  Then Show me a image of the page
