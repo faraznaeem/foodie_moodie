@@ -17,7 +17,8 @@ When(/^I add "([^"]*)" to order$/) do |dish_title|
 end
 
 When(/^show me the page$/) do
-  save_and_open_page
+  sleep(1)
+#  save_and_open_page
 end
 
 Then(/^Order items in cart should be "([^"]*)"$/) do |expected_count|
