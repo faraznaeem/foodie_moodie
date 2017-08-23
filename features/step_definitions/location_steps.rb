@@ -4,7 +4,7 @@ And(/^(?:I expect a Google map to load|the map has been loaded)$/) do
 end
 
 Then(/^the center of the map should be approximately "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
-  page.evaluate_script("map.setCenter(#{lat}, #{lng})")
+  page.execute_script("map.setCenter(#{lat}, #{lng})")
 end
 
 Then(/^my location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
@@ -13,4 +13,8 @@ Then(/^my location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
   center_lng = page.evaluate_script('map.getCenter().lng();')
   expect(center_lat).to be_within(ACCEPTED_OFFSET).of(lat.to_f)
   expect(center_lng).to be_within(ACCEPTED_OFFSET).of(lng.to_f)
+end
+
+Given(/^my current location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
+  page.execute_script("map.setCenter(#{lat}, #{lng});")
 end

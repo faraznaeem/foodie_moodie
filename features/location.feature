@@ -11,7 +11,7 @@ Background:
     | American Fun | Snigelgatan 69  | 164 55      | 0735465      | Kista | American Food |
   And I visit "landing" page
 
-  @javascript
-  Scenario:
-    Then the map has been loaded
-    And my location is set to "59.33066" lat and "18.057932" lng
+@javascript
+Scenario:
+  Then the map has been loaded
+  And my location is set to "59.33066" lat and "18.057932" lng
