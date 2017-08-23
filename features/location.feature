@@ -13,7 +13,5 @@ Background:
 
   @javascript
   Scenario:
-    Then I should see map
-    And the map has been loaded
+    Then the map has been loaded
     And my location is set to "59.33066" lat and "18.057932" lng
-

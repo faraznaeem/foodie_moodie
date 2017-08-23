@@ -3,8 +3,7 @@ var my_longitude;
 var map;
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log( "ready!" );
-    map = new GMaps({
+      map = new GMaps({
         div: '#map',
         lat: 59.330668,
         lng: 18.057932,
@@ -17,19 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
             my_longitude = position.coords.longitude;
         },
         error: function(error) {
-            console.log('Geolocation failed: '+error.message);
+            alert('Geolocation failed: '+error.message);
             my_latitude = 59.330668;
             my_longitude = 18.057932;
         },
         not_supported: function() {
-            console.log("Your browser does not support geolocation");
+            alert("Your browser does not support geolocation");
             my_latitude = 59.330668;
             my_longitude = 18.057932;
-            console.log(my_latitude);
         },
         always: function() {
-            console.log("KÖR DETTA");
-            map.addMarker({
+              map.addMarker({
                 lat: my_latitude,
                 lng: my_longitude,
                 title: 'Lima',
