@@ -8,13 +8,19 @@ Feature: As a user
       | name       | address1     | postal_code | phone_number | city  | cuisine     |
       | Indian Fun | Snorgatan 12 | 164 55      | 1234555      | Kista | Indian Food |
 
+    And the following categories exist:
+      | name    | description                     |
+      | Starter | Start your dinner with fun      |
+      | Main    | Brace yourself winter is coming |
+      | Dessert | Winter is here                  |
+
     And the following dishes exist:
-      | title         | description                      | price | restaurant |
-      | papadom       | deep fried crunchy things        | 100   | Indian Fun |
-      | indian lamb   | lamb with indian spices          | 200   | Indian Fun |
-      | chicken curry | chicken boiled in curry sauce    | 300   | Indian Fun |
-      | vegan curry   | vegetables boiled in curry sauce | 400   | Indian Fun |
-      | choco curry   | Chocolate boiled in curry sauce  | 500   | Indian Fun |
+      | title         | description                      | price | restaurant | dish_category  |
+      | papadom       | deep fried crunchy things        | 100   | Indian Fun | Starter        |
+      | indian lamb   | lamb with indian spices          | 200   | Indian Fun | Main           |
+      | chicken curry | chicken boiled in curry sauce    | 300   | Indian Fun | Main           |
+      | vegan curry   | vegetables boiled in curry sauce | 400   | Indian Fun | Main           |
+      | choco curry   | Chocolate boiled in curry sauce  | 500   | Indian Fun | Dessert        |
 
 
   Scenario Outline:
