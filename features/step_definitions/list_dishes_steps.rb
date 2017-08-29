@@ -8,9 +8,6 @@ Given(/^the following dishes exist:$/) do |table|
   table.hashes.each do |hash|
     restaurant = Restaurant.find_by(name: hash[:restaurant])
     dish_category = DishCategory.find_by(name: hash[:dish_category])
-    #binding.pry
-    #dish_hash = hash.except!(:restaurant).merge!({restaurant: restaurant})
-    #dish_hash = dish_hash.except!(:dish_category).merge!({dish_category: restaurant})
     dish_hash = hash.except("restaurant", "dish_category")
     .merge({restaurant: restaurant, dish_category: dish_category})
     FactoryGirl.create(:dish, dish_hash)
