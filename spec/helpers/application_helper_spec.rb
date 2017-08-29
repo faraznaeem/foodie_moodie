@@ -8,6 +8,7 @@ RSpec.describe ApplicationHelper do
 
     context 'order has items' do
       let!(:order) { create(:order) }
+      let!(:category) { create(:dish_category)}
       let!(:product_1) { create(:dish) }
       let!(:product_2) { create(:dish) }
 

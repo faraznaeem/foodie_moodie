@@ -30,9 +30,9 @@ Feature: As a user
     And I should see "<price>"
 
     Examples:
-      | title         | description                      | price | category |
-      | papadom       | deep fried crunchy things        | 100   | starter  |
-      | indian lamb   | lamb with indian spices          | 200   | main     |
-      | chicken curry | chicken boiled in curry sauce    | 300   | main     |
-      | vegan curry   | vegetables boiled in curry sauce | 400   | main     |
-      | choco curry   | Chocolate boiled in curry sauce  | 500   | dessert  |
+      | title         | description                      | price | dish_category |
+      | papadom       | deep fried crunchy things        | 100   | Starter       |
+      | indian lamb   | lamb with indian spices          | 200   | Main          |
+      | chicken curry | chicken boiled in curry sauce    | 300   | Main          |
+      | vegan curry   | vegetables boiled in curry sauce | 400   | Main          |
+      | choco curry   | Chocolate boiled in curry sauce  | 500   | Dessert       |

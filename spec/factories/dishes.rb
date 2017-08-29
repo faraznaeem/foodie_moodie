@@ -4,6 +4,6 @@ FactoryGirl.define do
     description 'MyText'
     price 1
     restaurant
-    dish_category DishCategory.first
+    dish_category
   end
 end
