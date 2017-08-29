@@ -21,8 +21,9 @@
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4"><%= dish.title %><i class="material-icons right">close</i></span>
 
-            <p><%= dish.description %></p>
-            <div><%= dish.price %> sek</div>
+            <div>Category: <%= dish.dish_category.name %> </div>
+            <p>Description: <%= dish.description %></p>
+            <div>Price: <%= dish.price %> sek</div>
             <br>
 
           </div>
