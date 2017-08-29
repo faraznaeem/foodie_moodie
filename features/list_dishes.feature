@@ -28,6 +28,7 @@ Feature: As a user
     And I should see "<title>"
     And I should see "<description>"
     And I should see "<price>"
+    And I should see "<dish_category>"
 
     Examples:
       | title         | description                      | price | dish_category |
