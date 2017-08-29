@@ -1,8 +1,8 @@
 @javascript @stripe
 
 Feature: As a restaurant owner
-  In order to get some money
-  I need customers to pay on checkout.
+  In order to be able to deliver the order
+  I require customers to fill in their information before paying
 
   Background:
     Given the following restaurants exist:
@@ -19,11 +19,4 @@ Feature: As a restaurant owner
     And I click on "Show Order"
     Then I should be on the order page
     And I enter in my personal information
-    And I click the "Pay with Card" stripe button
-    And I fill in my card details on the stripe form
-    And I submit the stripe form
-    Then I should see "Thanks, you paid 1000.00 sek!"
-    And I should see "Including VAT. (12%): 107.10 sek"
-    And I should see "papadom"
-    Then the order should be payed for
-    Then Order items in cart should be "0"
+    Then the "Pay with Card" button should be enabled
